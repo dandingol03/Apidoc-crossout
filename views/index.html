@@ -64,29 +64,6 @@
 
         <!-- content -->
         <div id="content">
-            <div id="project">
-                <div class="pull-left">
-                    <h1>apidoc-example</h1>
-
-                    <h2>apiDoc example project</h2>
-                </div>
-                <div class="pull-right">
-                    <div class="btn-group">
-                        <button id="version" class="btn btn-large dropdown-toggle" data-toggle="dropdown">
-                            <strong>0.3.0</strong> <span class="caret"></span>
-                        </button>
-                        <ul id="versions" class="dropdown-menu open-left">
-                            <li><a id="compareAllWithPredecessor" href="#">Compare all with predecessor</a></li>
-                            <li class="divider"></li>
-                            <li class="disabled"><a href="#">show up to version:</a></li>
-                            <li class="version"><a href="#">0.3.0</a></li>
-                            <li class="version"><a href="#">0.2.0</a></li>
-                            <li class="version"><a href="#">0.1.0</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
             <div id="header">
                 <div id="api-_"><h2 id="welcome-to-apidoc">Welcome to apiDoc</h2>
 
@@ -95,14 +72,8 @@
             </div>
             <div id="sections">
                 <section id="api-User">
-                    <h1>User</h1>
-
-                    <div id="api-User-GetUser">
-
+                  <div id="api-User-GetUser">
                         <article id="api-User-GetUser-0.3.0" data-group="User" data-name="GetUser" data-version="0.3.0">
-                            <div class="pull-left">
-                                <h1>User - Read data of a User</h1>
-                            </div>
                             <div class="pull-right">
                                 <div class="btn-group">
                                     <button class="version btn dropdown-toggle" data-toggle="dropdown">
@@ -117,20 +88,7 @@
                                 </div>
                             </div>
                             <div class="clearfix"></div>
-
-                            <p></p>
-
-                            <p>Compare Verison 0.3.0 with 0.2.0 and you will see the green markers with new items in
-                                version 0.3.0 and red markers with removed items since 0.2.0.</p>
-
-                            <p></p>
-
-                            <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span
-                                    class="pln">/user/:id</span></code></pre>
-
                             <p>
-                                Permission:
-                                admin
                                 &nbsp;<a href="#" data-toggle="popover" data-placement="right" data-html="true"
                                          data-content="<p>Optionally you can write here further Informations about the permission.</p> <p>An &amp;quot;apiDefine&amp;quot;-block can have an &amp;quot;apiVersion&amp;quot;, so you can attach the block to a specific version.</p> "
                                          title="" data-original-title="Admin access rights needed.">
@@ -143,18 +101,6 @@
                                     <a href="#examples-User-GetUser-0_3_0-0">Example usage:</a>
                                 </li>
                             </ul>
-
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="examples-User-GetUser-0_3_0-0">
-                                    <pre class="prettyprint language-json prettyprinted" data-type="json"><code><span
-                                            class="pln">curl </span><span class="pun">-</span><span
-                                            class="pln">i http</span><span class="pun">://</span><span class="pln">localhost</span><span
-                                            class="pun">/</span><span class="pln">user</span><span
-                                            class="pun">/</span><span class="lit">4711</span></code></pre>
-                                </div>
-                            </div>
-
-
                             <h2>Parameter</h2>
                             <table>
                                 <thead>
@@ -180,164 +126,6 @@
                             </table>
 
 
-                            <h2>Success 200</h2>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th style="width: 30%">Field</th>
-                                    <th style="width: 10%">Type</th>
-                                    <th style="width: 70%">Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="code">id</td>
-                                    <td>
-                                        String
-                                    </td>
-                                    <td>
-                                        <p>The Users-ID.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">registered</td>
-                                    <td>
-                                        Date
-                                    </td>
-                                    <td>
-                                        <p>Registration Date.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">name</td>
-                                    <td>
-                                        Date
-                                    </td>
-                                    <td>
-                                        <p>Fullname of the User.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">nicknames</td>
-                                    <td>
-                                        String[]
-                                    </td>
-                                    <td>
-                                        <p>List of Users nicknames (Array of Strings).</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">profile</td>
-                                    <td>
-                                        Object
-                                    </td>
-                                    <td>
-                                        <p>Profile data (example for an Object)</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">&nbsp;&nbsp;age</td>
-                                    <td>
-                                        Number
-                                    </td>
-                                    <td>
-                                        <p>Users age.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">&nbsp;&nbsp;image</td>
-                                    <td>
-                                        String
-                                    </td>
-                                    <td>
-                                        <p>Avatar-Image.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">options</td>
-                                    <td>
-                                        Object[]
-                                    </td>
-                                    <td>
-                                        <p>List of Users options (Array of Objects).</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">&nbsp;&nbsp;name</td>
-                                    <td>
-                                        String
-                                    </td>
-                                    <td>
-                                        <p>Option Name.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">&nbsp;&nbsp;value</td>
-                                    <td>
-                                        String
-                                    </td>
-                                    <td>
-                                        <p>Option Value.</p>
-
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-
-                            <h2>Error 4xx</h2>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th style="width: 30%">Field</th>
-
-                                    <th style="width: 70%">Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="code">NoAccessRight</td>
-                                    <td>
-                                        <p>Only authenticated Admins can access the data.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">UserNotFound</td>
-                                    <td>
-                                        <p>The <code>id</code> of the User was not found.</p>
-
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                            <ul class="nav nav-tabs nav-tabs-examples">
-                                <li class="active">
-                                    <a href="#error-examples-User-GetUser-0_3_0-0">Response (example):</a>
-                                </li>
-                            </ul>
 
                             <div class="tab-content">
                                 <div class="tab-pane active" id="error-examples-User-GetUser-0_3_0-0">
@@ -353,50 +141,10 @@
                             </div>
 
 
-                            <h2>Send a Sample Request</h2>
-
-                            <form class="form-horizontal">
-                                <fieldset>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <div class="input-prepend">&gt;
-                                                <span class="add-on">url</span>
-                                                <input type="text" class="input-xxlarge sample-request-url"
-                                                       value="http://apidocjs.com/example/api_project.json">
-                                            </div>
-                                        </div>
-                                    </div>
 
 
-                                    <h3>Parameters</h3>
-                                    <h4><input type="radio" data-sample-request-param-group-id="sample-request-param-0"
-                                               name="User-GetUser-0_3_0-sample-request-param" value="0"
-                                               class="sample-request-param sample-request-switch" checked=""> Parameter
-                                    </h4>
 
-                                    <div class="User-GetUser-0_3_0-sample-request-param-fields">
-                                        <div class="control-group">
-                                            <label class="control-label" for="sample-request-param-field-id">id</label>
 
-                                            <div class="controls">
-                                                <div class="input-append">&gt;
-                                                    <input type="text" placeholder="id"
-                                                           class="input-xxlarge sample-request-param"
-                                                           data-sample-request-param-name="id"
-                                                           data-sample-request-param-group="sample-request-param-0">
-                                                    <span class="add-on">String</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button class="btn btn-default sample-request-send"
-                                                    data-sample-request-type="get">Send
-                                            </button>
-                                        </div>
-                                    </div>
 
                                     <div class="sample-request-response" style="display: none;">
                                         <h3>
@@ -693,21 +441,6 @@
                             </div>
                             <div class="clearfix"></div>
 
-                            <p></p>
-
-                            <p>In this case "apiUse" is defined and used. Define blocks with params that will be used in
-                                several functions, so you dont have to rewrite them.</p>
-
-                            <p></p>
-
-                            <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span
-                                    class="pln">/user</span></code></pre>
-
-                            <p>
-                                Permission:
-                                none
-                            </p>
-
 
                             <h2>Parameter</h2>
                             <table>
@@ -732,83 +465,6 @@
                                 </tr>
                                 </tbody>
                             </table>
-
-
-                            <h2>Success 200</h2>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th style="width: 30%">Field</th>
-                                    <th style="width: 10%">Type</th>
-                                    <th style="width: 70%">Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="code">id</td>
-                                    <td>
-                                        String
-                                    </td>
-                                    <td>
-                                        <p>The new Users-ID.</p>
-
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-
-                            <h2>Error 4xx</h2>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th style="width: 30%">Field</th>
-
-                                    <th style="width: 70%">Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="code">NoAccessRight</td>
-                                    <td>
-                                        <p>Only authenticated Admins can access the data.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">UserNameTooShort</td>
-                                    <td>
-                                        <p>Minimum of 5 characters required.</p>
-
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-                            <ul class="nav nav-tabs nav-tabs-examples">
-                                <li class="active">
-                                    <a href="#error-examples-User-PostUser-0_3_0-0">Response (example):</a>
-                                </li>
-                            </ul>
-
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="error-examples-User-PostUser-0_3_0-0">
-        <pre class="prettyprint language-json prettyprinted" data-type="json">
-            <code>
-                <span class="pln">    HTTP</span><span class="pun">/</span><span class="lit">1.1</span><span
-                    class="pln"> </span><span class="lit">400</span><span class="pln"> </span><span
-                    class="typ">Bad</span><span class="pln"> </span><span class="typ">Request</span><span class="pln">
-    </span><span class="pun">{</span><span class="pln">
-      </span><span class="str">"error"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"UserNameTooShort"</span><span class="pln">
-    </span><span class="pun">}</span>
-            </code>
-        </pre>
-                                </div>
-                            </div>
-
 
                         </article>
 
@@ -956,7 +612,7 @@
 
                         <article id="api-User-PutUser-0.3.0" data-group="User" data-name="PutUser" data-version="0.3.0">
                             <div class="pull-left">
-                                <h1>User - Change a new User</h1>
+                                <h1>Diagram</h1>
                             </div>
                             <div class="pull-right">
                                 <div class="btn-group">
@@ -978,68 +634,8 @@
 
                             <p></p>
 
-                            <pre class="prettyprint language-html prettyprinted" data-type="put"><code><span
-                                    class="pln">/user/:id</span></code></pre>
-
-                            <p>
-                                Permission:
-                                none
-                            </p>
 
 
-                            <h2>Parameter</h2>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th style="width: 30%">Field</th>
-                                    <th style="width: 10%">Type</th>
-                                    <th style="width: 70%">Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="code">name</td>
-                                    <td>
-                                        String
-                                    </td>
-                                    <td>
-                                        <p>Name of the User.</p>
-
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-
-
-                            <h2>Error 4xx</h2>
-                            <table>
-                                <thead>
-                                <tr>
-                                    <th style="width: 30%">Field</th>
-
-                                    <th style="width: 70%">Description</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="code">NoAccessRight</td>
-                                    <td>
-                                        <p>Only authenticated Admins can access the data.</p>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="code">UserNameTooShort</td>
-                                    <td>
-                                        <p>Minimum of 5 characters required.</p>
-
-
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
 
                             <ul class="nav nav-tabs nav-tabs-examples">
                                 <li class="active">

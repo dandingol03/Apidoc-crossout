@@ -1,0 +1,21 @@
+{
+  "name": "apidoc-crossout",
+  "version": "1.0.0",
+  "description": "for apidoc generate",
+  "main": "server.js",
+  "scripts": {
+    "test": "xx",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xx"
+  },
+  "author": "dandingol03",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-static": "^1.0.3"
+  }
+}

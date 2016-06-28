@@ -1,0 +1,17 @@
+#sidenav nav ul li.nav-header{
+    margin-top:20px;
+
+}
+
+#sidenav nav ul li.nav-header.nav-fixed{
+    margin-top:0px;
+}
+
+#sidenav nav ul li.nav-header.nav-fixed a{
+    color:#fff;
+}
+
+.label.label-info{
+    padding:.8em .8em;
+
+}

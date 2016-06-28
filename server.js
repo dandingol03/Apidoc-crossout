@@ -16,9 +16,10 @@ var Pattern=require('./node/pattern/Pattern');
 app.use(static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.set("view engine","ejs");
 
 app.get('/', function (req, res) {
-    res.send("have fun!");
+    res.render("index",{"title":"test"});
 });
 
 

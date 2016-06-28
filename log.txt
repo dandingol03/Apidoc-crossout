@@ -4,6 +4,7 @@ require('../../css/components/basic/attention.css');
 
 var SyncStore = require('../flux/stores/SyncStore');
 
+
 /**
  * @author: dandingol03
  * @example

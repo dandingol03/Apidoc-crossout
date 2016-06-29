@@ -9,6 +9,8 @@ var SyncStore = require('../flux/stores/SyncStore');
  * @example
  * <Attention auto={true}/>
  * @description: this is a new component Attention
+ * @property: data,string,这是通知吗？
+ *
  */
 
 var Attention = React.createClass({

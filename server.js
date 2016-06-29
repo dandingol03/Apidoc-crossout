@@ -18,7 +18,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set("view engine","ejs");
 
+//Todo tomorrow
+
 app.get('/', function (req, res) {
+    var arr=new Array();
+    arr.push('a','b');
     res.render("index",{"title":"test"});
 });
 
@@ -26,20 +30,27 @@ app.get('/', function (req, res) {
 /**
  * fetch component
  */
-app.get("/generate/apiDoc.do",function(req,res) {
+app.get("/generate/apiDoc.do/:componentName",function(req,res) {
     try {
         //var user_name=req.body.user;
-        var content=fs.readFileSync('./log.txt','utf-8');
+        var content=fs.readFileSync('./components/basic/'+req.params.componentName,'utf-8');
         //fs.writeFileSync('./log.txt',content,'utf8');
         //var files=fs.readdirSync('./components/basic');
         //files.map(function(filename,i) {
         //   console.log('filename==='+filename);
         //});
-        Pattern.comment(content);
-        Pattern.author(content);
-        Pattern.description(content);
-        Pattern.example(content);
-        res.send('got ready');
+        var params=new Object();
+        params.comment=Pattern.comment(content);
+        params.Pattern= Pattern.author(content);
+        params.description=Pattern.description(content);
+        params.example= Pattern.example(content);
+        var propertyMaps=Pattern.properties(content).split(",");
+        var property=new Object();
+        property.id=propertyMaps[0];
+        property.type=propertyMaps[1];
+        property.description=propertyMaps[2];
+        params.property=property;
+        res.render("index",params);
     } catch (err) {
         err.message =  err.message;
         throw err;

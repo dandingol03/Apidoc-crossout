@@ -15,21 +15,21 @@ var Pattern={
         }
 
     },
-    props:function(ob){
-
-
+    properties:function(ob){
+        var re=/\@property:(.*?)\s*\*/.exec(ob);
+        return re[1].replace(/\*/g,"");
     },
     example:function(ob){
         var re=/@example\s*([\s|\S]*?)(?:\s\*\/|\s*\@)/.exec(ob);
-        console.log("example====\r\n"+re[1].replace(/\*/g,""));
+        return re[1].replace(/\*/g,"");
     },
     description:function(ob){
         var re=/\@description:(.*?)\s*\*/.exec(ob);
-        console.log("description====\r\n"+re[1].replace(/\*/g,""));
+        return re[1].replace(/\*/g,"");
     },
     comment:function(ob){
         var re =/\/\*\*\s*([\s|\S]*)\*\//.exec(ob);
-        console.log("re===="+re[1]);
+        return re[1].replace(/\*/g,"");
     }
 
 }

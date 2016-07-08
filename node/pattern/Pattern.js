@@ -30,6 +30,11 @@ var Pattern={
     comment:function(ob){
         var re =/\/\*\*\s*([\s|\S]*)\*\//.exec(ob);
         return re[1].replace(/\*/g,"");
+    },
+    style:function(ob)
+    {
+        var re =/style=\{\{(.*)\}\}/.exec(ob);
+        return re[1].replace(/\*/g,"");
     }
 
 }

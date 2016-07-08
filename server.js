@@ -11,7 +11,9 @@ var static = require("express-static");
 var bodyParser=require('body-parser');
 var fs=require('fs');
 var Pattern=require('./node/pattern/Pattern');
+var colors = require('colors');
 
+console.log('hello'.green);
 
 app.use(static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -26,6 +28,12 @@ app.get('/', function (req, res) {
     res.render("index",{"title":"test"});
 });
 
+app.get('/modify/:componentName',function(req,res)
+{
+    var content=fs.readFileSync('components/basic/'+req.params.componentName,'utf-8');
+    console.log(Pattern.style(content).rainbow);
+    res.send('it is back');
+});
 
 /**
  * fetch component

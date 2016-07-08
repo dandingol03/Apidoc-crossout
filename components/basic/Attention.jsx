@@ -36,7 +36,7 @@ var Attention = React.createClass({
         }
 
         return (
-            <ul className="popular-in Attention">
+            <ul className="popular-in Attention" style={{color:"red"}}>
                 {lis !== undefined && lis !== null && lis.length != 0 ? lis : <span>您没有未完成的业务</span>}
             </ul>
         )
